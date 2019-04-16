@@ -205,6 +205,11 @@ export default class TestScope {
     component.props.onPress();
   }
 
+  async focus(identifier) {
+    const component = await this.findComponent(identifier);
+    component.props.onFocus();
+  }
+
   // Public: Pause the test for a specified length of time, perhaps to allow
   // time for a request response to be received.
   //
